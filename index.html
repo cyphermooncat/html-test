@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<script  type="text/javascript">
+    var clicks = 0;
+
+    function onClick() {
+      clicks += 1;
+      document.getElementById("clicks").innerHTML = clicks;
+
+      if (clicks >= 5) {
+        document.getElementById("secret").innerHTML="encore";
+        if (clicks >= 15) {
+        	document.getElementById("secret").innerHTML="chouton d'amour <3 !!";
+      	}} 
+      else {
+        	document.getElementById("secret").innerHTML="continue à cliquer";
+        }	
+      
+
+    };
+</script>
+    
+<button type="button" onClick="onClick()">Click pour dévoiler un secret!</button>
+
+<p>Click: <a id="clicks">0</a></p>
+<p>Secret: <a id="secret"></a></p>
+
+
+</body>
+</html>
